@@ -6,7 +6,7 @@ export class Stock {
     item: Item
     count: number
 
-    private constructor(item: Item,
+    constructor(item: Item,
         count: number) {
         this.item = item;
         this.count = count;

@@ -5,27 +5,31 @@ export class User {
     firstName?: string
     lastName?: string
     email: string
+    isAdmin: boolean
 
-    private constructor(id: number,
+    constructor(id: number,
         firstName: string,
         lastName: string,
-        email: string) {
+        email: string,
+        isAdmin: boolean) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.isAdmin = isAdmin;
     }
 
     public static create(id: number,
         firstName: string,
         lastName: string,
-        email: string) {
+        email: string,
+        isAdmin: boolean) {
         if (id == null) {
             throw new BadRequest('No id, no user');
         }
         if (email == null) {
             throw new BadRequest('No email, no user');
         }
-        return new User(id, firstName, lastName, email);
+        return new User(id, firstName, lastName, email, isAdmin);
     }
 }

@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AppService } from './app.service';
-import { CaddyController, ItemController, StoreController, UserController } from './user-side/controllers/index';
+import { UserModule, ItemModule, CaddyModule, StockModule } from './user-side/modules';
+import { SuperDatabaseModule } from './user-side/modules/database-module';
 
 @Module({
-  imports: [],
-  controllers: [UserController, ItemController, CaddyController, StoreController],
-  providers: [AppService],
+  imports: [UserModule, ItemModule, CaddyModule, StockModule, SuperDatabaseModule],
 })
 export class AppModule { }

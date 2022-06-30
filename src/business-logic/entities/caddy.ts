@@ -5,7 +5,7 @@ export class Caddy {
     userId: Number
     items?: Item[]
 
-    private constructor(userId: number, items: Item[]) {
+    constructor(userId: number, items: Item[]) {
         this.userId = userId;
         this.items = items;
     }

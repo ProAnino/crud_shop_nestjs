@@ -7,7 +7,7 @@ export class Item {
     description?: string
     price: number
 
-    private constructor(
+    constructor(
         id: number,
         label: string,
         description: string,
