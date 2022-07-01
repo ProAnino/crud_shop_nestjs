@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Patch, Post } from '@nestjs/common';
 import { ItemService } from 'src/business-logic/services';
-import { CreateItemDto } from './dtos/item/create-item.dto';
-import { EditItemDto } from './dtos/item/edit-item.dto';
+import { CreateItemDto } from '../dtos/item/create-item.dto';
+import { EditItemDto } from '../dtos/item/edit-item.dto';
 
 @Controller('items')
 export class ItemController {

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { SuperDatabase } from 'src/server-side/super-database';
 import { SuperDatabaseService } from 'src/server-side/super-database.service';
-import { CreateStockDto } from 'src/user-side/controllers/dtos/stock/create-stock.dto';
+import { CreateStockDto } from 'src/user-side/dtos/stock/create-stock.dto';
 
 @Injectable()
 export class StockService {

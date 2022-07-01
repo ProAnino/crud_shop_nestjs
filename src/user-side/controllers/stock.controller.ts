@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Patch, Post } from '@nestjs/common';
 import { StockService } from 'src/business-logic/services';
-import { CreateStockDto } from './dtos/stock/create-stock.dto';
+import { CreateStockDto } from '../dtos/stock/create-stock.dto';
 
 @Controller('stocks')
 export class StockController {

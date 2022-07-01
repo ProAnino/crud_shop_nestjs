@@ -2,7 +2,7 @@ import { Caddy } from "src/business-logic/entities/caddy";
 import { Item } from "src/business-logic/entities/item";
 import { Stock } from "src/business-logic/entities/stock";
 import { User } from "src/business-logic/entities/user";
-import { CreateStockDto } from "src/user-side/controllers/dtos/stock/create-stock.dto";
+import { CreateStockDto } from "src/user-side/dtos/stock/create-stock.dto";
 
 export class SuperDatabase {
     items?: Array<Item>

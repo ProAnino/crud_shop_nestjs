@@ -1,7 +1,7 @@
 import { ForbiddenException, Injectable, Param, ParseIntPipe } from '@nestjs/common';
 import { SuperDatabaseService } from 'src/server-side/super-database.service';
-import { CreateItemDto } from 'src/user-side/controllers/dtos/item/create-item.dto';
-import { EditItemDto } from 'src/user-side/controllers/dtos/item/edit-item.dto';
+import { CreateItemDto } from 'src/user-side/dtos/item/create-item.dto';
+import { EditItemDto } from 'src/user-side/dtos/item/edit-item.dto';
 
 @Injectable()
 export class ItemService {

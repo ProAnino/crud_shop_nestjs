@@ -1,13 +1,30 @@
 import { Injectable } from "@nestjs/common";
 import { Item } from "src/business-logic/entities/item";
 import { BadRequest } from "src/shared/errors";
-import { CreateItemDto } from "src/user-side/controllers/dtos/item/create-item.dto";
-import { EditItemDto } from "src/user-side/controllers/dtos/item/edit-item.dto";
-import { CreateStockDto } from "src/user-side/controllers/dtos/stock/create-stock.dto";
+import { CreateItemDto } from "src/user-side/dtos/item/create-item.dto";
+import { EditItemDto } from "src/user-side/dtos/item/edit-item.dto";
+import { CreateStockDto } from "src/user-side/dtos/stock/create-stock.dto";
+import { EditUserDto } from "src/user-side/dtos/user/edit-user.dto";
 import { SuperDatabase } from "./super-database";
 
 @Injectable()
 export class SuperDatabaseService {
+
+    findUserById(userId: number) {
+        return 'user with id = ' + userId;
+    }
+    deleteUserById(userId: number) {
+        return 'user with id = ' + userId + ' deleted.';
+    }
+    updateUserById(userId: number, dto: EditUserDto) {
+        return 'user with id = ' + userId + ' updated on ' + { ...dto };
+    }
+    createUser(email: string, hash: string) {
+        return 'user with email = ' + email + ' and hash = ' + hash + ' created !';
+    }
+    findUserByEmail(email: string) {
+        return 'user with email = ' + email;
+    }
 
     deleteStockByItemId(itemId: number) {
         return 'stock of item with id = ' + itemId + ' deleted.';
